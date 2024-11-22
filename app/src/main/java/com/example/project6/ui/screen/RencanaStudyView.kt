@@ -104,8 +104,37 @@ fun RencanaStudyView(
                 )
             }
         }
+        Box(
+            modifier = Modifier
+                .background(
+                    color = Color.White,
+                    shape = RoundedCornerShape(
+                        topEnd = 15.dp,
+                        topStart = 15.dp
+                    )
+                )
+                .fillMaxSize()
+        ){
+            Column (
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp)
+            ) {
+                Text(
+                    text = " Pilih Mata Kuliah Peminatan ",
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier .padding(8.dp))
+                DynamicSelectTextField(
+                    selectedValue = chosenDropdown,
+                    options = MataKuliah.options,
+                    label = "Mata Kuliah",
+                    onValueChangedEvent = {
+                        chosenDropdown = it
+                    }
+                )
 
+            }
         }
     }
-
 }
