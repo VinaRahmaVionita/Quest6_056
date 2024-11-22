@@ -51,3 +51,8 @@ fun TampilView(
         Pair("Email", mahasiswaUiState.email)
     )
 
+    val listDataKrs = listOf(
+        Pair("MataKuliah", krsStateUi.mataKuliah),
+        Pair("Kelas", krsStateUi.kelas)
+    )
+
