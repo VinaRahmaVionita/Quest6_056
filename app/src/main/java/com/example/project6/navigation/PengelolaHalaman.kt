@@ -30,3 +30,12 @@ enum class Halaman {
     Tampil
 }
 
+@Composable
+fun MahasiswaApp(
+    modifier: Modifier = Modifier,
+    mahasiswaViewModel: MahasiswaViewModel = viewModel(),
+    krsViewModel: RencanaStudyViewModel = viewModel(),
+    navController: NavHostController = rememberNavController()
+) {
+
+}
