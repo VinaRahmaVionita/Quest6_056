@@ -109,6 +109,41 @@ fun MahasiswaFormView(
                 )
                 .fillMaxSize(),
         ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Masukkan Data Kamu",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 19.sp
+                )
+                Text(
+                    text = "Isi sesuai data yang kamu daftarkan",
+                    fontWeight = FontWeight.Light
+                )
+
+                Spacer(modifier = Modifier.padding(8.dp))
+                OutlinedTextField(
+                    modifier = Modifier.fillMaxWidth(),
+                    value = nim,
+                    onValueChange = { nim = it },
+                    label = { Text(text = "Nomor Induk Mahasiswa") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Info,
+                            contentDescription = " "
+                        )
+                    },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Number,
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    shape = RoundedCornerShape(50.dp)
+                )
 
 
         }
