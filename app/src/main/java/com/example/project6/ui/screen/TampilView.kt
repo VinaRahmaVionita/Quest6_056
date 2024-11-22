@@ -84,3 +84,30 @@ fun TampilView(
                 modifier = Modifier.fillMaxWidth()
             )
 
+            listDataMhs.forEach { items ->
+                CardSection(
+                    judulParam = items.first,
+                    isiParam = items.second
+                )
+            }
+
+            listDataKrs.forEach { items ->
+                CardSection(
+                    judulParam = items.first,
+                    isiParam = items.second
+                )
+            }
+
+            ElevatedButton(
+                onClick = { onBackButtonClicked() }
+            ) {
+                Text("Kembali")
+            }
+        }
+    }
+}
+
+
+
+
+
