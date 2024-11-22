@@ -56,3 +56,31 @@ fun TampilView(
         Pair("Kelas", krsStateUi.kelas)
     )
 
+    Box(
+        modifier = Modifier
+            .background(
+                color = Color.White,
+                shape = RoundedCornerShape(
+                    topEnd = 50.dp,
+                    topStart = 15.dp
+                )
+            )
+            .fillMaxSize()
+    ){
+
+        Column (
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ){
+
+            Spacer(modifier = Modifier.padding(8.dp))
+            Text(
+                text =  "INFORMASI MAHASISWA",
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold,
+                fontSize = 30.sp,
+                modifier = Modifier.fillMaxWidth()
+            )
+
