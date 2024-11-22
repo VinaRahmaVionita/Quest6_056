@@ -45,4 +45,9 @@ fun TampilView(
     krsStateUi: RencanaStudy,
     onBackButtonClicked: () -> Unit
 ){
+    val listDataMhs = listOf(
+        Pair("NIM", mahasiswaUiState.nim),
+        Pair("Nama", mahasiswaUiState.nama),
+        Pair("Email", mahasiswaUiState.email)
+    )
 
