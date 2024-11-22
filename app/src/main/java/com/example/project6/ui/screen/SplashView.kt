@@ -24,6 +24,28 @@ import com.example.project6.R
 fun SplashView(
     onMulaiButton: () -> Unit
 ) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .background(color = colorResource(
+            R.color.primary)
+        ),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    )
+    {
+        Image(
+            painter = painterResource(
+                R.drawable.umy
+            ),
+            contentDescription = null,
+            modifier = Modifier.size(150.dp)
+        )
+        Spacer(modifier = Modifier.padding(16.dp))
 
+        Button(onClick = onMulaiButton
+        )
+        { // Gunakan parameter navigasi
+            Text("Mulai")
+        }
     }
 }
